@@ -1,0 +1,151 @@
+http://bit.ly/2VJDL68
+
+Datadog-LNT-Pune-2020
+
+ProdX - LNTX
+======================
+Mgr - Mgrx
+========================
+DevOps->DevSecOps
+========================
+	Immediate release
+	Cost Reduction
+			Dev 
+			Running
+	Quality Improvement
+https://www.devopsschool.com/videos/387/complete-cicd-devops-implementation-from-
+
+scratch-using-jenkins-by-devopsschool/
+
+Agile -> CI -> CD
+===========================================
+Plan --> TFS, JIRA, Confluence, ALM
+Design -> Confluence
+Coding -> VSONLINE - Github
+Code Ana -> SonarQube, 
+UT - Junit - Nunit
+Build -> PACK --> Builders.
+repo for Pack - nexus - Artifactory
+================
+Dep2QA->
+==================================================
+Platform - Phyical ---> Virtual --> Containers
+-----------------------------------------------
+Virtual
+	PUBLIC
+		AWS
+		Azure
+			IAAS
+				Computer+Storage+networkign
+			PAAS
+				XXXX +DB
+			SAAS
+				XX
+			SLAS	
+				FUNCTION
+		GC
+	PVT
+		OpenStack
+		VSphere
+
+Containers 
+	Ent ORCH
+		OpenShift - Rancher - Docker Enterprise 
+			Kubernetes
+				PODs
+				   Containers
+					Docker
+						Image - Repo
+============================================================
+PackX45.4-> 200 BOXES
+
+1 Dep ---> 10 mins
+200 ----> 10 mins
+=========================
+		???
+Ansible -> Puppet -> Chef -> Octopus Dep -> uDeploy
+https://www.devopsschool.com/videos/show/ansible?type=video
+
+Next Exp ----> 
+1 Dep ----> 1 SEC
+10000 DEP --> 1 SEC
+	Containers --> Kubernetes
+
+Dep2UAT
+Dep2PreProd
+Dep2Prod
+CI - Jenkins
+============================================================
+Monitoring in Pre Prod
+
+Monitoring in Prod
+
+
+Monitoring 
+	Log Monitoing 
+
+	Infra Monitoring
+
+	Perforamce Monitoring
+============================================
+https://www.devopsschool.com/path
+
+
+LINUX
+====================================
+RHEL - 13.233.103.201
+ec2-user
+
+DD_AGENT_MAJOR_VERSION=7 DD_API_KEY= bash -c "$(curl -L 
+
+https://raw.githubusercontent.com/DataDog/datadog-
+
+agent/master/cmd/agent/install_script.sh)"
+
+* Adding your API key to the Agent configuration: /etc/datadog-agent/datadog.yaml
+
+/bin/systemctl
+* Starting the Agent...
+
+
+
+Your Agent is running and functioning properly. It will continue to run in the
+background and submit metrics to Datadog.
+
+If you ever want to stop the Agent, run:
+
+     systemctl stop datadog-agent
+
+And to run it again run:
+
+     systemctl start datadog-agent
+
+ps -eaf
+====================
+dd-agent  1423     1  1 09:21 ?        00:00:01 /opt/datadog-agent/bin/agent/agent 
+
+run -p /opt/d
+dd-agent  1424     1  0 09:21 ?        00:00:00 /opt/datadog-
+
+agent/embedded/bin/trace-agent --co
+dd-agent  1425     1  0 09:21 ?        00:00:00 /opt/datadog-
+
+agent/embedded/bin/process-agent --
+
+WINDOWS
+======================================
+WIDNOWS 2016- 13.234.66.85
+Public DNS	ec2-13-234-66-85.ap-south-1.compute.amazonaws.com
+User name	Administrator
+Password	
+
+===============================================
+Step 1 - Install Linux Agent
+Step 2 - Install Windows Agent
+Step 3 - Stop Agent Service and Start
+Step 4 - Navigate Infra list and Spend time with each host and experience
+Step 5 - Spend time with datadog.yaml and understand 20% of it.
+Step 6 - Spend time on Events and read everything
+
+
+
