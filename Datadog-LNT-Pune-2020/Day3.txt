@@ -1,0 +1,106 @@
+Problem - How to manage Large number of instance using Ansible?
+================================================================
+
+ACS					ARS
+========
+Ansible Control Server			Ansible Remote Server		
+=========================================================================
+			WINRM 		WINDOWS
+			SSH		LINUX
+			
+
+Ansible - Tool
+https://www.devopsschool.com/blog/how-to-install-ansible-in-centos-7-rhel-7/
+
+Playbook - Script
+
+Inventory - List of IP of ARS.
+
+ACS
+52.66.244.182
+
+ARS
+
+[web]
+35.154.207.199 ansible_user=ec2-user ansible_ssh_private_key_file=key.pem ansible_become=yes
+52.66.246.120 ansible_user=ec2-user ansible_ssh_private_key_file=key.pem ansible_become=yes
+
+[db]
+35.154.207.144 ansible_user=ec2-user ansible_ssh_private_key_file=key.pem ansible_become=yes
+52.66.246.140 ansible_user=ec2-user ansible_ssh_private_key_file=key.pem ansible_become=yes
+
+ec2-user
+rajesh-mumbai.pem
+
+
+
+
+DD_AGENT_MAJOR_VERSION=7 DD_API_KEY= bash -c "$(curl -L 
+
+https://raw.githubusercontent.com/DataDog/datadog-agent/master/cmd/agent/install_script.sh)"
+
+====================================
+installddagent.yaml
+============================
+GROUP - List of IP address
+TASKS -
+	TASK1
+	TASK2
+	TASK3
+============================
+
+- name: install Datadog agent
+  command: DD_AGENT_MAJOR_VERSION=7 DD_API_KEY= bash -c "$(curl -L 
+
+https://raw.githubusercontent.com/DataDog/datadog-agent/master/cmd/agent/install_script.sh)"
+
+
+- name: This sets up an data dog
+  hosts: web
+  tasks:
+  - name: Copy file with owner and permissions
+    copy:
+      src: install.sh
+      dest: /tmp
+      mode: '0755'
+  - name: Execute the command in remote shell; stdout goes to the specified file on the remote. 
+    shell: /tmp/install.sh >> somelog.txt
+
+...
+
+
+
+$ sudo yum install wget -y
+$ wget https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+$ yum install https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+$ sudo rpm -i epel-release-latest-7.noarch.rpm
+$ sudo yum install ansible -y
+$ systemctl stop firewalld
+$ systemctl disable firewalld
+
+
+- name: This sets up an data dog
+  hosts: web
+  tasks:
+  - name: Execute the command in remote shell; stdout goes to the specified file on the remote. 
+    shell: systemctl stop datadog-agent
+  - name: Copy file with owner and permissions
+    copy:
+      src: datadog.yaml
+      dest: /etc/datadog-agent/datadog.yaml
+      mode: '0644'
+      owner: dd-agent
+  - name: Execute the command in remote shell; stdout goes to the specified file on the remote. 
+    shell: systemctl start datadog-agent
+...
+
+
+   18  enablelog.yaml
+   19  vi enablelog.yaml
+   20  ansible-playbook -i inventory enablelog.yaml
+   21  vi enablelog.yaml
+   22  ansible-playbook -i inventory enablelog.yaml
+
+
+
+
