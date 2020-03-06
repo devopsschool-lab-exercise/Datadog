@@ -102,5 +102,34 @@ $ systemctl disable firewalld
    22  ansible-playbook -i inventory enablelog.yaml
 
 
+Tutorials
+https://www.devopsschool.com/tutorial/
 
+HTML Slides
+https://www.devopsschool.com/slides/
+
+PDF
+https://www.devopsschool.com/pdf/
+
+Videos
+https://www.devopsschool.com/videos/
+https://www.youtube.com/channel/UCrXr49kBvXJeQMMl2693c4g
+
+Notes
+github
+
+QUiz
+https://www.devopsschool.com/interview
+https://www.devopsschool.com/lms
+
+Blog
+http://www.devopsschool.com/blog/
+
+How to reach out tome?
+http://rajeshkumar.xyz/
+
+commands
+https://www.devopsschool.com/commands
+
+Certification by http://devopscertification.co/
 
