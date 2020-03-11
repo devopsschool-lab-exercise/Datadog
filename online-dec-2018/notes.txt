@@ -1,0 +1,73 @@
+What is Monitoring?	
+	Pre prod
+		SERVERS | APPS | SERVICES
+	Prod
+		SERVERS | APPS | SERVICES
+		PERFORMANCE | LOG
+
+https://www.devopsschool.com/path/
+
+Types of Monitoring we do?
+	Infrastructure Monitoring - SERVERS | SERVICES | APPS
+	Log Monitoring		 - LOG
+	Performance Monitoring	- Performance
+	Security
+
+What is Datadog
+	Was introduced for Infra monitoring
+		APM = Performance Monitoring
+		LOG = Log Monitoring
+	SAAS
+		NO need to being worrying about
+		- Datadog Server setup
+		- Datadog COnfig
+		- Datadog Backup
+		- Datadog Restore
+		- Datadog Maintaince
+		- Datadog Scalibility
+		- Datadog Availabiity 
+		- Datadog Security
+	OUT OF BOX SOLUTION FOR ALL OF YOUR NEED.
+
+How to get startted?
+
+Pricing - https://www.datadoghq.com/pricing/
+
+Docs - https://docs.datadoghq.com/
+
+
+Free Trials - https://www.datadoghq.com/ - 15 Days
+Email  DevOpsDataDog1@gmail.com
+	Test$123
+
+Agent Installation - 
+	LINUX
+	DD_API_KEY=7ef967985f5c640ffd9c822b96922cc5 bash -c "$(curl -L https://raw.githubusercontent.com/DataDog/datadog-agent/master/cmd/agent/install_script.sh)"
+	
+	EXECUTABLES - /opt/datadog-agent/bin/
+	CONFIG - /etc/datadog-agent/datadog.yaml
+	START | STOP
+	$ systemctl stop datadog-agent
+	$ systemctl start datadog-agent
+	
+	WINDOWS
+	msiexec /qn /i datadog-agent-6-latest.amd64.msi APIKEY="7ef967985f5c640ffd9c822b96922cc5" HOSTNAME="windows-laptop" TAGS="mytag1,mytag2"
+	
+
+FLOW - 
+	Create a Account	DONE
+	Install a Agent		DONE
+	Create a Dashboard	DONE
+	Create a Monitor
+	Install a Integration
+	
+Architecture of Agent
+------------------------
+The Agent has three main parts: the collector, DogStatsD, and the forwarder:
+
+Collector: It runs checks on the current machine for configured integrations, and captures system metrics, such as memory and CPU.
+
+DogStatsD: It is a StatsD-compatible backend server that you can send custom metrics to from your applications.
+
+Forwarder: It retrieves data from both DogStatsD and the collector, queues it up, and then sends it to Datadog.
+
